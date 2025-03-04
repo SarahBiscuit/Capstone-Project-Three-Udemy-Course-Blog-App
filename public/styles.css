@@ -20,6 +20,9 @@ img {
 .topnav {
     background-color: #aa5571;
     height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .topnav a {
