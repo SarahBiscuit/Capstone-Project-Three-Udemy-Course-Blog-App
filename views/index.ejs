@@ -1,85 +1,53 @@
-<%- include("partials/header.ejs") %>  
-
-</br>
-</br>
+<%- include("partials/header.ejs") %>
 
 <h1 id="nameOfBlog">The Broken Parent Blog</h1>
-
-<img src="/images/Pink flower (heading image).jpg" />
+<img src="/images/Pink flower (heading image).jpg" alt="Blog header image" />
 
 <div id="introduction">
-<p>Being a parent is definitely not easy... and we've all been there</p>
-<p>Things go wrong for everyone, and sometimes you just have to laugh.</p>
-<p>Add your own funny story about being a parent below, and enjoy a good chuckle and destress by reading other people's.</p>
+    <p>Being a parent is definitely not easy... and we've all been there.</p>
+    <p>Things go wrong for everyone, and sometimes you just have to laugh.</p>
+    <p>Add your own funny story about being a parent below, and enjoy a good chuckle and destress by reading other people's.</p>
 </div>
 
 <div id="myForm">
-    <h3>
-        Please submit your blog post here
-    </h3>
+    <h3>Please submit your blog post here</h3>
     <form action="/submit" method="POST">
         <label for="title">Title</label>
         <input type="text" name="title" required>
         <label for="blogEntry">Blog Entry</label>
-        <input type="text" name="blogEntry" required>
-        <input type="submit" value="submit">
+        <textarea name="blogEntry" required></textarea>
+        <input type="submit" value="Submit">
     </form>
 </div>
 
-<div id="editForms">
-    <h3>
-       When you have added a post to this page, a form will appear below to edit your posts.
-    </h3>
-    <h3>
-        You will see a separate edit form for each blog post.  Please edit the correct post and click the 'Update' button to amend your post.
-    </h3>
-    <div id="editForms">
-        <% blogPosts.forEach(function(blog) { %>
-            <form action="/edit/<%= blog.id %>" method="POST">
-                <label for="title">Title</label>
-                <input type="text" name="title" value="<%= blog.title %>" required>
-                <label for="blogEntry">Blog Entry</label>
-                <input type="text" name="blogEntry" value="<%= blog.blogEntry %>" required>
-                <input type="submit" value="Update">
-            </form>
-        <% }); %>
-    </div></form>
-</div>
-
 <div id="blogEntries">
-    <h2>Have a good laugh reading the blog posts below.  Click on each post title to open up and read the post.  Click on the delete button under the post in order to delete any post.</h2>
+    <h2>Have a good laugh reading the blog posts below. Click on each post title to open up and read the post. Click on the delete button under the post to delete any post.</h2>
 
-    <img src="/images/Blog entries image.jpg" />
-
-   <% //create accordion %>
-
-   <div class = "accordion" id="accordionExample">
-
-    <% //if statement to add the blog entries to the accordion// %>
-
-    <% if (blogPosts.length > 0) { %>
-        <% blogPosts.forEach((post, index) => { %>
-            <div class="accordion-item">
-                <h4 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>" 
-                    aria-expanded="true" aria-controls="collapse<%= index %>">
-                        <%= post.title %>
-                    </button>   
-                </h4> 
-                <div id="collapse<%= index %>" class="accordion-collapse collapse" aria-labelledby="heading<%= index %>" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <p><%= post.blogEntry %></p>
-                        <!-- Delete Button -->
-                <form action="/delete/<%= post.id %>" method="POST" style="display:inline;">
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
+    <div class="accordion" id="accordionExample">
+        <% if (blogPosts.length > 0) { %>
+            <% blogPosts.forEach((post, index) => { %>
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>" aria-expanded="true" aria-controls="collapse<%= index %>">
+                            <%= post.title %>
+                        </button>   
+                    </h4>
+                    <div id="collapse<%= index %>" class="accordion-collapse collapse" aria-labelledby="heading<%= index %>" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><%= post.blogEntry %></p>
+                            <form action="/delete/<%= post.id %>" method="POST" style="display:inline;">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                            <a href="/edit/<%= post.id %>" class="btn btn-primary" style="display:inline;">Edit</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <% }) %>
-    <% } %>
+            <% }) %>
+        <% } else { %>
+            <p>No blog posts available yet.</p>
+        <% } %>
+    </div>
+</div>
 
-<%- include("partials/footer.ejs") %>  
-
-    
+<%- include("partials/footer.ejs") %>
  

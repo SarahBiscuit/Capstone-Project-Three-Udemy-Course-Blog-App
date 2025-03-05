@@ -25,8 +25,15 @@ app.post("/submit", (req, res) => {
 });
 
 // Route to render the edit page
-app.get('/edit', (req, res) => {
-    res.render('edit', { blogPosts }); // Render EJS view with blogs array
+app.get('/edit/:id', (req, res) => {
+    const blogId = parseInt(req.params.id);
+    const blog = blogPosts.find(b => b.id === blogId);
+
+    if (!blog) {
+        return res.status(404).send("Blog post not found");
+    }
+
+    res.render('edit', { blog }); // Render single blog for editing
 });
 
 // Route to handle edit submission
