@@ -1,5 +1,5 @@
 img {
-    height: 15rem;
+   height: 15rem;
     width: 15rem;
     border: solid pink .2rem;
     display: block;
@@ -34,3 +34,6 @@ img {
     color: black !important;
     font-size: 1rem;
 }
+ //Write media query to resize for mobile screen
+
+ //write media query to change for dark mode

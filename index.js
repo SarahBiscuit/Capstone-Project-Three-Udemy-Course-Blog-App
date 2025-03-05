@@ -47,6 +47,20 @@ app.get("/contact", (req, res) => {
     res.render("contact.ejs");
 });
 
+// Route to handle deleting a blog post
+app.post("/delete/:id", (req, res) => {
+    const blogId = parseInt(req.params.id);
+    
+    // Find index of the blog post with the given ID
+    const myIndex = blogPosts.findIndex(b => b.id === blogId);
+
+    if (myIndex !== -1) {
+        blogPosts.splice(myIndex, 1); // Remove post from the array
+    }
+
+    res.redirect("/"); // Redirect to the homepage after deletion
+});
+
 app.listen(3000, () => {
     console.log("Server running on port 3000.");
     });

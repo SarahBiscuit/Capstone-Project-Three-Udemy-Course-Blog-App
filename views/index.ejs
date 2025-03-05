@@ -47,7 +47,7 @@
 </div>
 
 <div id="blogEntries">
-    <h2>Have a good laugh reading the blog posts below.  Click on each post title to open up and read the post.</h2>
+    <h2>Have a good laugh reading the blog posts below.  Click on each post title to open up and read the post.  Click on the delete button under the post in order to delete any post.</h2>
 
     <img src="/images/Blog entries image.jpg" />
 
@@ -69,6 +69,10 @@
                 <div id="collapse<%= index %>" class="accordion-collapse collapse" aria-labelledby="heading<%= index %>" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <p><%= post.blogEntry %></p>
+                        <!-- Delete Button -->
+                <form action="/delete/<%= post.id %>" method="POST" style="display:inline;">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
                     </div>
                 </div>
             </div>
