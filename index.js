@@ -50,10 +50,6 @@ app.post('/edit/:id', (req, res) => {
     res.redirect('/'); // Redirect back to the homepage after editing
 });
 
-app.get("/contact", (req, res) => {
-    res.render("contact.ejs");
-});
-
 // Route to handle deleting a blog post
 app.post("/delete/:id", (req, res) => {
     const blogId = parseInt(req.params.id);
