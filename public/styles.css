@@ -47,6 +47,7 @@ img {
     color: black !important;
     font-size: 1rem;
 }
+
  //Write media query to resize for mobile screen
  @media only screen and (max-width: 768px){
     img {
