@@ -43,7 +43,7 @@ img {
 #addBlogPosts {
     width: 35rem;
     background-color: #ffeaea;
-    height: 15rem;
+    font-weight: bold;
 }
 
 .topnav, .bottomnav {
