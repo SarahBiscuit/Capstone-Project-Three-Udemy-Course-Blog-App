@@ -24,7 +24,7 @@ img {
     text-align: center;
 }
 
-#introduction {
+.introduction {
     border: solid pink .2rem;
     background-color: #bb778d;
     display: block;

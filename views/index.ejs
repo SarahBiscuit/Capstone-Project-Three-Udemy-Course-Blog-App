@@ -10,7 +10,7 @@
 </br>
 </br>
 
-<div id="introduction">
+<div class="introduction">
     <p>Being a parent is definitely not easy... and we've all been there.</p>
     <p>Things go wrong for everyone, and sometimes you just have to laugh.</p>
     <p>Add your own funny story about being a parent below, and enjoy a good chuckle and destress by reading other people's.</p>
@@ -45,10 +45,13 @@
         </div>
     </div>    
 
+</br>
+</br>
 
-<div id="blogEntries">
+
+<div id="blogEntries" class="introduction">
     <! Have removed flower image here - can add back in if needed -->
-    <h2>Have a good laugh reading the blog posts below. Click on each post title to open up and read the post. Click on the delete button under the post to delete any post.</h2>
+    <p>Have a good laugh reading the blog posts below. Click on each post title to open up and read the post. Click on the delete button under the post to delete any post.</p>
 
     <div class="accordion" id="accordionExample">
         <% if (blogPosts.length > 0) { %>
@@ -109,5 +112,8 @@
         <% } %>
     </div>
 </div>
+
+</br>
+</br>
 
 <%- include("partials/footer.ejs") %>
