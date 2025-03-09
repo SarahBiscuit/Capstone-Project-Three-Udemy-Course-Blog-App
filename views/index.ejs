@@ -19,16 +19,22 @@
     <p>Add your own funny story about being a parent below, and enjoy a good chuckle and destress by reading other people's.</p>
 </div>
 
-<div id="myForm">
-    <h3>Please submit your blog post here</h3>
-    <form action="/submit" method="POST">
-        <label for="title">Title</label>
-        <input type="text" name="title" required>
-        <label for="blogEntry">Blog Entry</label>
-        <textarea name="blogEntry" required></textarea>
-        <input type="submit" value="Submit">
-    </form>
-</div>
+</br>
+</br>
+
+    <div id="myForm">
+        <div id="addBlogPosts" class="container">
+            <h3>Please submit your blog post here</h3>
+                <form action="/submit" method="POST">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" required>
+                    <label for="blogEntry">Blog Entry</label>
+                    <textarea name="blogEntry" required></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+        </div>
+    </div>    
+
 
 <div id="blogEntries">
     <img src="/images/Blog entries image.jpg" alt="Blog header image" />

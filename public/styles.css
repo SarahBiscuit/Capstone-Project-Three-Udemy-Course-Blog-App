@@ -35,6 +35,17 @@ img {
     width: 50rem;
 }
 
+#myForm {
+    background-image: url(Images/pexels-cottonbro-7253641.jpg);
+    height: 30rem;
+}
+
+#addBlogPosts {
+    width: 35rem;
+    background-color: #ffeaea;
+    height: 15rem;
+}
+
 .topnav, .bottomnav {
     background-color: #aa5571;
     height: 3rem;
