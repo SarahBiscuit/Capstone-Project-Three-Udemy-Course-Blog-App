@@ -85,22 +85,24 @@ img {
     background-color: cream;
 }
 
- //Write media query to resize for mobile screen
+ /*Write media query to resize for mobile screen*/
  @media only screen and (max-width: 768px){
-    img {
-        height: 5rem;
-         width: 5rem;
-     }
+    
 
  }
 
- //Write media query to resize for tablet screen
+ /*Write media query to resize for tablet screen*/
 @media only screen and (max-width: 1024px){
-    img {
-        height: 10rem;
-        width: 10rem;
-    }
+    
 }
 
 
- //write media query to change for dark mode
+ /*write media query to change for dark mode*/
+
+ @media (prefers-color-scheme: dark) {
+
+    body {
+        background-color: black !important;
+    }
+
+ }
