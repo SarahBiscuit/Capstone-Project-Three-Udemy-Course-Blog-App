@@ -4,8 +4,7 @@ body {
 }
 
 #nameOfBlog {
-    width: 50%;
-    height: 5rem;
+    width: 60%;
     border: solid pink .2rem;
     background-color: #BB778D;
     display: block;
@@ -13,6 +12,7 @@ body {
     margin-right: auto;
     font-size: 2.5rem;
     text-align: center;
+    padding: 1rem;
 }
 
 .introduction {
