@@ -60,6 +60,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    width: 100%;
 }
 
 .topnav a {
@@ -78,7 +79,15 @@ body {
 
  /*Write media query to resize for mobile screen*/
  @media only screen and (max-width: 768px){
-    
+    #myForm {
+        background-size: cover; /* Ensure the background image still covers the element */
+        background-position: center center; /* Keep the image centered */
+        padding: 1rem; /* Adjust padding for better spacing */
+    }
+
+    #addBlogPosts {
+        width: 70%;
+    }
 
  }
 
