@@ -48,6 +48,10 @@ img {
     font-size: 1.3rem;
 }
 
+#submitButton {
+    background-color: #aa5571;
+}
+
 .topnav, .bottomnav {
     background-color: #aa5571;
     height: 3rem;
