@@ -38,12 +38,15 @@ img {
 #myForm {
     background-image: url(Images/pexels-cottonbro-7253641.jpg);
     height: 30rem;
+    border: #aa5571 solid .2rem;
 }
 
 #addBlogPosts {
     width: 35rem;
+    height: 100vh;
     background-color: #ffeaea;
     font-weight: bold;
+    font-size: 1.3rem;
 }
 
 .topnav, .bottomnav {
